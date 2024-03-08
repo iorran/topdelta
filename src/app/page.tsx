@@ -10,7 +10,7 @@ export default function Home() {
           Website under maintenance!
         </p>
         <p className="text-xl text-gray-700 uppercase mt-4">
-          We'll be back soon
+          We will be back soon
         </p>
       </div>
       <div className="w-full py-4 border-t border-gray-300">

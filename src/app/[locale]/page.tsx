@@ -1,21 +1,21 @@
 import Image from "next/image";
-import maintenance from "../../public/maintenance.svg";
+import maintenance from "../../../public/maintenance.svg";
+import { useTranslations } from "next-intl";
 
 export default function Home() {
+  const t = useTranslations("maintenance");
   return (
     <div className="w-full h-screen flex flex-col items-center justify-between">
       <div className="xl:w-1/2 flex-1 flex flex-col items-center justify-center text-center px-4 lg:px-0">
         <Image priority src={maintenance} alt="Maintenance" />
         <p className="text-4xl font-bold text-gray-700 capitalize tracking-wide mt-8">
-          Website under maintenance!
+          {t("title")}
         </p>
-        <p className="text-xl text-gray-700 uppercase mt-4">
-          We will be back soon
-        </p>
+        <p className="text-xl text-gray-700 uppercase mt-4">{t("subtitle")}</p>
       </div>
       <div className="w-full py-4 border-t border-gray-300">
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-center text-gray-600 text-sm md:space-x-8 space-y-1 md:space-y-0">
-          <span className="font-bold">You can contact us:</span>
+          <span className="font-bold">{t("contact")}</span>
           <a
             href="#"
             className="flex items-center space-x-1"

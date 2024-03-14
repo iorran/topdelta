@@ -1,5 +1,6 @@
 import Image from "next/image";
 import maintenance from "../../../public/maintenance.svg";
+import logo from "../../../public/logo.svg";
 import { useTranslations } from "next-intl";
 
 export default function Home() {
@@ -13,7 +14,7 @@ export default function Home() {
         </p>
         <p className="text-xl text-gray-700 uppercase mt-4">{t("subtitle")}</p>
       </div>
-      <div className="w-full py-4 border-t border-gray-300">
+      {/* <div className="w-full py-4 border-t border-gray-300">
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-center text-gray-600 text-sm md:space-x-8 space-y-1 md:space-y-0">
           <span className="font-bold">{t("contact")}</span>
           <a
@@ -50,6 +51,9 @@ export default function Home() {
             <span>contact@example.com</span>
           </a>
         </div>
+      </div> */}
+      <div className="xl:w-1/2 flex-1 flex flex-col items-center justify-center text-center px-4 lg:px-0">
+        <Image priority src={logo} alt="Logo" />
       </div>
     </div>
   );
